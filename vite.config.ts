@@ -9,7 +9,10 @@ export default defineConfig(({ mode }) => {
     server: {
       port: parseInt(env.VITE_PORT)
     },
-    plugins: [svelte()]
+    plugins: [svelte()],
+    optimizeDeps: {
+      exclude: [`svelte-navigator`]
+    }
   }
 })
 
